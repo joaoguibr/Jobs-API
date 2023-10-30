@@ -4,7 +4,7 @@ info:
   contact: {}
   version: '1.0'
 servers:
-  - url: https://jobs-api-joao-fa74e08c75b3.herokuapp.com/api/v1
+  - url: localhost:3000
     variables: {}
 paths:
   /auth/register:
