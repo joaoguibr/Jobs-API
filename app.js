@@ -1,5 +1,4 @@
 require("dotenv").config();
-require("express-async-errors");
 
 // extra security packages
 const helmet = require("helmet");
@@ -27,8 +26,8 @@ const errorHandlerMiddleware = require("./middleware/error-handler");
 app.set("trust proxy", 1);
 app.use(
   rateLimiter({
-    windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 100, // limit each IP to 100 requests per windowMs
+    windowMs: 15 * 60 * 1000,
+    max: 100,
   })
 );
 app.use(express.json());
